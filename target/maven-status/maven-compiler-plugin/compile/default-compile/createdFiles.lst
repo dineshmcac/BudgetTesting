@@ -1,0 +1,12 @@
+dataReader/ExcelProvider.class
+base/WdMethods.class
+pages/HomePage.class
+base/WdEventImpl.class
+test/BuyLowPriceSUV.class
+reporter/ReportImpl.class
+pages/SwitchCompanyPage.class
+dataReader/AbstractDataProvider.class
+pages/AbstractPage.class
+reporter/PdfReporter.class
+reporter/Reporter.class
+base/PreAndPost.class
