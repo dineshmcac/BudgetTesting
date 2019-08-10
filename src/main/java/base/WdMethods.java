@@ -1,12 +1,8 @@
 package base;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class WdMethods extends WdEventImpl{	
@@ -84,51 +80,5 @@ public class WdMethods extends WdEventImpl{
 		return ele.getAttribute(value);
 	}
 
-	public boolean verifyText(WebElement ele, String text) {
-		return ele.getText().equals(text);
-	}
-
-	public boolean verifyPartialText(WebElement ele, String text) {
-		return ele.getText().contains(text);
-	}	
-
-	public boolean verifyTitle(String title) {
-		return getEventDriver().getTitle().equalsIgnoreCase(title);
-	}
-
-
-	public void switchToFrame(WebElement ele) {
-		getEventDriver().switchTo().frame(ele);
-	}
-
-	public void switchToFrame(int index) {
-		getEventDriver().switchTo().frame(index);
-	}
-
-	public void acceptAlert() {
-		getEventDriver().switchTo().alert().accept();
-	}
-
-	public void dismissAlert() {
-		getEventDriver().switchTo().alert().dismiss();
-	}
-
-	public void sendTextAlert(String txt) {
-		getEventDriver().switchTo().alert().sendKeys(txt);
-	}
-
-	public String getTextAlert() {
-		return getEventDriver().switchTo().alert().getText();
-	}	
-
-	public void switchWindow(int index) {
-		List<String> lstWindows = new ArrayList<>();
-		lstWindows.addAll(getEventDriver().getWindowHandles());
-		getEventDriver().switchTo().window(lstWindows.get(index));
-	}
-
-
-	public void mouseOverOnElement(WebElement ele) {
-		new Actions(getEventDriver()).moveToElement(ele).build().perform();
-	}
+	
 }

@@ -1,12 +1,13 @@
+/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/pages/Vehicles.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/reporter/Reporter.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/dataReader/AbstractDataProvider.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/dataReader/ExcelProvider.java
+/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/pages/ReviewAndBook.java
+/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/base/WdEventImpl.java
+/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/reporter/ReportImpl.java
+/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/base/WdMethods.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/pages/AbstractPage.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/base/PreAndPost.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/reporter/PdfReporter.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/test/BuyLowPriceSUV.java
 /Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/pages/HomePage.java
-/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/pages/SwitchCompanyPage.java
-/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/base/WdEventImpl.java
-/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/reporter/ReportImpl.java
-/Users/dchengalvarayan/Documents/gogows/BudgetTesting/src/main/java/base/WdMethods.java
