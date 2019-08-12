@@ -21,13 +21,17 @@ public class BuyLowPriceSUV extends PreAndPost{
 	}
 	
 	@Test(dataProvider="fetchData")
-	public void BuyCar(String PickUpLocation, 
+	public void BuyCar(String PickUpLocation,
+			String DropDate_from,
+			String StartDateTime,
+			String EndDateTime,
 			String fname,
 			String lname,
-			String e_mail)
+			String e_mail
+			)
 	{
 		new HomePage()
-		.selectCar(PickUpLocation)
+		.selectCar(PickUpLocation,StartDateTime,EndDateTime,DropDate_from)
 		.selectVehicles()
 		.fillDetails(fname, lname, e_mail);
 	}

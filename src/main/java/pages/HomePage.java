@@ -20,6 +20,9 @@ public class HomePage extends AbstractPage{
 	@FindBy(how = How.ID, using = "from")
 	WebElement fromDate;
 	
+	@FindBy(how = How.ID, using = "to")
+	WebElement toDate;
+	
 	@FindBy(how = How.XPATH, using = "//a[contains(@class,'ui-datepicker-startdate')]/..")
 	WebElement currentDate;
 
@@ -36,35 +39,33 @@ public class HomePage extends AbstractPage{
 	WebElement auto_complete;
 	
 	
-	
-	//price[@ng-if='checkVisible() && !isLmbRequest']
-	
-	//extras
-	//span[text()='Base Rate']/../span[2]
-	//button[text()='Continue']
-	
-	//review-and-book
-	//firstname
-	//lastname
-	//email
-	
-	
-	public Vehicles selectCar(String PickUpLocation)  {
+	public Vehicles selectCar(String PickUpLocation,
+			String StartDateTime,
+			String EndDateTime,
+			String DropDate_from
+			)  {
 		type(pickUpElement, PickUpLocation);
 		click(auto_complete);
 		click(fromDate);
-
+		click(currentDate);
+		selectUsingValue(selectTime, StartDateTime);
+		click(toDate);
+		selectDropDate(DropDate_from);
+		selectUsingValue(selectTime, EndDateTime);
+		click(selectCar);
+		return new Vehicles();
+	}
+	
+	void selectDropDate(String DropDate_from) {
 		int date = Integer.parseInt(currentDate.getText());
 		int month = Integer.parseInt(currentDate.getAttribute("data-month"));
 		int year = Integer.parseInt(currentDate.getAttribute("data-year"));
+
+		LocalDate date1 =  LocalDate.of(year, month, date).plusDays(Integer.parseInt(DropDate_from));
 		
-		LocalDate date1 =  LocalDate.of(year, month, date).plusDays(5);
 		String enddate = "//td[@data-month='"+date1.getMonthValue()+"' and @data-year='"+date1.getYear()+"']/a[text()="+date1.getDayOfMonth()+"]";
 		ele = getDriver().findElement(By.xpath(enddate));
 		ele.click();
-		selectUsingValue(selectTime, "string:1:00 AM");
-		click(selectCar);
-		return new Vehicles();
 	}
 
 
